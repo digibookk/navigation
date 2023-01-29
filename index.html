@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>@digibookk</title>
+<link rel="stylesheet" href="screen.css" />
+<script src="https://kit.fontawesome.com/662c60d443.js" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+$(".hamburger-btn .fa-xmark").hide();
+	
+	$(".hamburger-btn .fa-bars").click(function(){
+		$(this).hide();
+		$(".hamburger-btn .fa-xmark").show();
+		$(".mob ul").addClass("active");
+	});
+	
+	$(".hamburger-btn .fa-xmark").click(function(){
+		$(this).hide();
+		$(".hamburger-btn .fa-bars").show();
+		$(".mob ul").removeClass("active");
+	});
+});
+
+</script>
+</head>
+<body>
+<div class="container">
+<nav class="desk">
+<ul>
+	<li class="active"><a href="#">home</a></li>
+	<li><a href="#">services</a></li>
+	<li><a href="#">price</a></li>
+	<li><a href="#">FAQ</a></li>
+	<li><a href="#">about</a></li>
+</ul>
+</nav>
+<nav class="mob">
+<div class="hamburger-btn">
+<i class="fa fa-light fa-xmark"></i>
+<i class="fa fa-light fa-bars"></i>  
+</div>
+<ul>
+	<li class="active"><a href="#">home</a></li>
+	<li><a href="#">services</a></li> 
+	<li><a href="#">price</a></li>
+	<li><a href="#">FAQ</a></li>
+	<li><a href="#">about</a></li>
+</ul>
+</nav>
+</div>
+</body>
+</html>
